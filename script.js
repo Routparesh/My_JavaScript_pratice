@@ -114,7 +114,7 @@ if (friends.length) {
 		();
 }
 
-const paresh = {
+/*const paresh = {
 	firstName: 'paresh',
 	lastName: 'rout',
 	birthYeah: 1994,
@@ -149,4 +149,87 @@ const paresh = {
 };
 //console.log(paresh['calcAge'](1994));
 
-console.log(paresh.getSummary());
+console.log(paresh.getSummary());*/
+
+//for  loop keeps running while condition is true
+for (let reap = 1; reap <= 10; reap++) {
+	console.log(`lifting weights repetation ${reap}`);
+}
+
+const paresh = [
+	'paresh',
+	'Rout',
+	2022 - 1994,
+	'web devloper',
+	['bapu', 'gelhi', 'chintu', 'mamuni'],
+	true,
+];
+
+const types = [];
+
+for (let i = 0; i < paresh.length; i++) {
+	//reading from paresh array
+	console.log(paresh[i], typeof paresh[i]);
+
+	//filling types array
+	//types[i] = typeof paresh[i];
+	types.push(typeof paresh[i]);
+}
+
+console.log(types);
+
+const birthYeah = [1994, 1997, 2000, 1965];
+const ages = [];
+
+for (let i = 0; i < birthYeah.length; i++) {
+	ages.push(2022 - birthYeah[i]);
+}
+
+console.log(ages);
+
+// continue statement
+for (let i = 0; i < paresh.length; i++) {
+	if (typeof paresh[i] !== 'string') continue;
+
+	console.log(paresh[i], typeof paresh[i]);
+}
+
+//break statement
+for (let i = 0; i < paresh.length; i++) {
+	if (typeof paresh[i] === 'number') break;
+
+	console.log(paresh[i], typeof paresh[i]);
+}
+
+//reverse Loop
+for (let i = paresh.length - 1; i >= 0; i--) {
+	console.log(i, paresh[i]);
+}
+
+//Nested Loop
+for (let excercise = 1; excercise < 4; excercise++) {
+	console.log(`------Starting exercise ${excercise}`);
+
+	for (let rep = 1; rep < 6; rep++) {
+		console.log(`Excercise ${excercise}: Lifting weight repetition ${rep}
+		🏋️‍♂️🏋️‍♀️`);
+	}
+}
+
+//while loop
+let rep = 1;
+while (rep <= 10) {
+	//console.log(`While: Lifting wights repetition ${rep}`);
+	rep++;
+}
+
+//Random number generator
+let dice = Math.trunc(Math.random() * 6) + 1;
+
+while (dice !== 6) {
+	console.log(`You rolled a ${dice}`);
+	dice = Math.trunc(Math.random() * 6) + 1;
+	if (dice === 6) {
+		console.log('Loop about to end');
+	}
+}
